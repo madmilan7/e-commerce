@@ -11,16 +11,15 @@ import Login from './components/Login';
 import Main from './pages/Main';
 
 const App = () => {
-
   return (
-    <>
+    <div>
       <Navbar />
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Main />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

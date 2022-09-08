@@ -52,8 +52,7 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center bg-gray-50 h-screen'>
-            <form className='border border-solid border-slate-300 
-                            w-fit h-fit p-12 m-12 rounded-lg bg-white'>
+            <form className='w-fit h-fit p-12 m-12 bg-white shadow-xl'>
                 <h2 className='text-left mb-10 font-bold text-3xl text-purple-700'>Login</h2>
                 <div className='flex flex-col mb-2 h-20'>
                     <label className='text-left mb-1 text-gray-400'>E-mail</label>
@@ -62,7 +61,7 @@ const Login = () => {
                         name="email"
                         onChange={changeHandler}
                         onFocus={focusHandler}
-                        className={`w-80 h-8 rounded-md px-3 border border-solid
+                        className={`w-80 h-8 px-3 border border-solid
                           focus:outline-none border-slate-300 
                           ${errors.name && touched.name ? 'border-red-500' : ''}`}
                     />
@@ -80,7 +79,7 @@ const Login = () => {
                         name="password"
                         onChange={changeHandler}
                         onFocus={focusHandler}
-                        className={`w-80 h-8 rounded-md px-3 border border-solid
+                        className={`w-80 h-8 px-3 border border-solid
                           focus:outline-none border-slate-300 
                           ${errors.name && touched.name ? 'border-red-500' : ''}`}
                     />
@@ -98,7 +97,7 @@ const Login = () => {
                         name="isAccepted"
                         onChange={changeHandler}
                         onFocus={focusHandler}
-                        className='ml-4 w-4 h-4 appearance-none border border-solid border-slate-500 rounded checked:bg-blue-500 checked:border-blue-500 focus:outline-none transition duration-200 cursor-pointer'
+                        className='ml-4 w-4 h-4 appearance-none border border-solid border-slate-500 checked:bg-blue-500 checked:border-blue-500 focus:outline-none transition duration-200 cursor-pointer'
                     />
                     {errors.isAccepted && touched.isAccepted &&
                         <span className='h-4 text-left mt-1 ml-1 w-fit text-red-600 
@@ -112,7 +111,7 @@ const Login = () => {
                     <button
                         type="submit"
                         onClick={submitHandler}
-                        className='text-white bg-purple-700 text-lg px-4 py-1 rounded-md'>
+                        className='text-white bg-purple-700 text-lg px-4 py-1'>
                         Login
                     </button>
                 </div>

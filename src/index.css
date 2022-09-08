@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: Gumela;
-    src: url('../src/fonts/Gumela\ Regular.otf');
+    font-family: Raleway;
+    src: url('../src/fonts/Raleway-Medium.ttf');
 }
 
 * {
-    font-family: 'Gumela';
-    font-weight: normal;
+    font-family: 'Raleway';
+    font-weight:  normal;
 }
 
 body {
