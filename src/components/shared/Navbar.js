@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Icons
-import cart from '../assets/icons/cart.svg';
-import login from '../assets/icons/login.svg';
-import search from '../assets/icons/search.svg';
+import cart from '../../assets/icons/cart.svg';
+import login from '../../assets/icons/login.svg';
+import search from '../../assets/icons/search.svg';
 
 const Navbar = () => {
     return (
