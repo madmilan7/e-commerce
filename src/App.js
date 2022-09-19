@@ -8,6 +8,7 @@ import Navbar from './components/shared/Navbar';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Store from './components/Store';
+import ProductsDetails from './components/ProductsDetails';
 
 // Pages
 import Main from './pages/Main';
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/products" element={<Store />} />
+        <Route path="/products/:id" element={<ProductsDetails />} />
         <Route path="/" element={<Main />} />
       </Routes>
     </Provider>
