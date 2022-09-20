@@ -9,6 +9,7 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Store from './components/Store';
 import ProductsDetails from './components/ProductsDetails';
+import ShopCart from './components/ShopCart';
 
 // Pages
 import Main from './pages/Main';
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/products" element={<Store />} />
         <Route path="/products/:id" element={<ProductsDetails />} />
+        <Route path="/cart" element={<ShopCart />} />
         <Route path="/" element={<Main />} />
       </Routes>
     </Provider>
