@@ -1,59 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/navigation';
+
+// Redux
+import { fetchProducts } from '../redux/products/productsAction';
+
+// Components
+import Slide from './shared/Slide';
 
 const MainSlider = () => {
+
+    const productsState = useSelector(state => state.productsState.products);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (!productsState.length) dispatch(fetchProducts());
+    }, [dispatch, productsState]);
+
     return (
         <div>
             <Swiper
+                modules={[Navigation]}
                 spaceBetween={30}
                 slidesPerView={1}
+                navigation
                 loop={true}
                 className='h-[36rem] flex bg-purple-800 mt-1'
             >
-                <SwiperSlide>
-                    <div className='flex justify-evenly items-center mt-36'>
-                        <div className='text-slate-200'>
-                            <p className='text-7xl'>desc 1.</p>
-                            <button className='bg-purple-400 px-14 py-3 mt-10 text-xl text-purple-900'>Details</button>
-                        </div>
-
-                        <img
-                            src='img'
-                            alt='slider'
-                            className='w-72 h-72 bg-red-200 border-8 border-purple-300'
-                        />
-                    </div>
-                </SwiperSlide>;
-                <SwiperSlide>
-                    <div className='flex justify-evenly items-center mt-36'>
-                        <div className='text-slate-200'>
-                            <p className='text-7xl'>desc 2</p>
-                            <button className='bg-purple-400 px-14 py-3 mt-10 text-xl text-purple-900'>Details</button>
-                        </div>
-
-                        <img
-                            src='img'
-                            alt='slider'
-                            className='w-72 h-72 bg-red-200 border-8 border-purple-300'
-                        />
-                    </div>
-                </SwiperSlide>;
-                <SwiperSlide>
-                    <div className='flex justify-evenly items-center mt-36'>
-                        <div className='text-slate-200'>
-                            <p className='text-7xl'>desc 3</p>
-                            <button className='bg-purple-400 px-14 py-3 mt-10 text-xl text-purple-900'>Details</button>
-                        </div>
-
-                        <img
-                            src='img'
-                            alt='slider'
-                            className='w-72 h-72 bg-red-200 border-8 border-purple-300'
-                        />
-                    </div>
-                </SwiperSlide>;
+                {
+                    productsState.filter((product, idx) => idx < 3).map((product) => (
+                        <SwiperSlide key={product.id}>
+                            <Slide productData={product} />
+                        </SwiperSlide>
+                    )
+                    )
+                }
             </Swiper>
         </div>
     );

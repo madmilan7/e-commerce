@@ -15,3 +15,10 @@
 body {
     margin: 0;
 }
+
+body .swiper-button-prev,body .swiper-button-next {
+    color: #fff;
+    padding: 2.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
