@@ -10,6 +10,7 @@ import Login from './components/Login';
 import Store from './components/Store';
 import ProductsDetails from './components/ProductsDetails';
 import ShopCart from './components/ShopCart';
+import Footer from './components/shared/Footer';
 
 // Pages
 import Main from './pages/Main';
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/cart" element={<ShopCart />} />
         <Route path="/" element={<Main />} />
       </Routes>
+      <Footer />
     </Provider>
   );
 }
