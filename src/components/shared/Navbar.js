@@ -19,14 +19,14 @@ const Navbar = () => {
             </div>
             <ul className='flex gap-12 text-xl'>
                 <Link to="/products"><li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>Products</li></Link>
-                <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>phone</li>
-                <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>phone</li>
-                <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>phone</li>
+                <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>About us</li>
+                <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>Support</li>
+                <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>Help</li>
             </ul>
             <div className='flex font-bold gap-6 mt-2 justify-center items-center'>
-                <div>
-                    <Link to="/cart"><img className='relative w-8' src={cart} alt="cart" /></Link>
-                    <span>{counter}</span>
+                <div className='relative'>
+                    <Link to="/cart"><img className='w-8' src={cart} alt="cart" /></Link>
+                    <span className='absolute bottom-7 right-3 bg-purple-700 text-white rounded-full h-5 w-5 text-center text-sm'>{counter}</span>
                 </div>
                 <Link to="/signup"><img className='w-7' src={login} alt="login" /></Link>
             </div>
