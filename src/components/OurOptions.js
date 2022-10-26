@@ -9,10 +9,10 @@ import origianl from '../assets/icons/original.png';
 
 const OurOptions = () => {
     return (
-        <div className='flex justify-around items-center bg-gray-50 h-96'>
-            <div className='flex flex-col gap-3 items-center'>
+        <div className='flex justify-around items-baseline h-80 mt-28'>
+            <div className='flex flex-col gap-3 items-center w-32'>
                 <img src={origianl} alt="original" className="w-28 bg-purple-100 p-6 rounded-lg" />
-                <p className='text-lg'>Authenticity of Products</p>
+                <p className='text-lg text-center'>Authenticity of Products</p>
             </div>
             <div className='flex flex-col gap-3 items-center'>
                 <img src={payment} alt="payment" className="w-28 bg-purple-100 p-6 rounded-lg" />

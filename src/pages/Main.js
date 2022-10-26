@@ -8,7 +8,7 @@ import OurOptions from '../components/OurOptions';
 
 const Main = () => {
     return (
-        <div>
+        <div className='bg-gray-50'>
            <MainSlider /> 
            <PopularProducts />
            <Jewellery />
