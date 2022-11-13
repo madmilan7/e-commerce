@@ -18,7 +18,7 @@ const Store = () => {
 
     return (
         <div className='bg-gray-50 pb-20'>
-            <div className='flex justify-between items-center flex-wrap gap-x-24 mx-24 mt-1'>
+            <div className='flex justify-between items-center flex-wrap gap-x-10 mx-24 mt-1'>
                 {
                     productsState.loading ?
                         <p>loading...</p> :
