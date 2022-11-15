@@ -11,15 +11,20 @@ const ProductsDetails = () => {
     const { image, title, description, price, category } = product;
 
     return (
-        <div>
-            <img src={image} alt="product" />
-            <div>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <p><span>Category: </span>{category}</p>
-                <div>
-                    <span>{price} $</span>
-                    <Link to="/products">back to shop</Link>
+        <div className='flex justify-center items-start pt-32 bg-gray-50 h-screen'>
+            <div className='flex bg-white w-3/4 h-96 shadow-xl'>
+                <img src={image} alt="product" className='w-80 h-80 my-auto px-4' />
+                <div className='flex flex-col justify-evenly px-16'>
+                    <h3 className='text-xl text-purple-800'>{title}</h3>
+                    <p className='text-gray-500'>{description}</p>
+                    <p><span className='text-lg'>Category: </span>
+                        <span className='bg-purple-700 text-white px-3 py-2'>{category}</span>
+                    </p>
+                    <div className='flex justify-between'>
+                        <span className='text-xl text-purple-700'>{price} $</span>
+                        <Link to="/products"
+                            className='bg-purple-700 text-white px-3 py-2'>back to shop</Link>
+                    </div>
                 </div>
             </div>
         </div>

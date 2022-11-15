@@ -21,7 +21,7 @@ const Store = () => {
             <div className='flex justify-between items-center flex-wrap gap-x-10 mx-24 mt-1'>
                 {
                     productsState.loading ?
-                        <p>loading...</p> :
+                        <p className='h-screen'>loading...</p> :
                         productsState.error ?
                             <p>somethin went wrong!</p> :
                             productsState.products.map(product =>
