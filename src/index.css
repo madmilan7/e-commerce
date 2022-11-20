@@ -7,6 +7,18 @@
     src: url('../src/fonts/Raleway-Medium.ttf');
 }
 
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+}
+
 * {
     font-family: 'Raleway';
     font-weight:  normal;

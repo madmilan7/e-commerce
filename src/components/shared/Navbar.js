@@ -13,11 +13,12 @@ const Navbar = () => {
 
     return (
         <div className='h-24 mx-24 flex justify-between items-center mt-0 p-3'>
-            <div className='flex items-center'>
+            <div className='lg:hidden'>burger</div>
+            <div className='hidden lg:flex items-center'>
                 <Link to="/"><h1 className='text-3xl p-3 font-bold text-purple-800'>moboland</h1></Link>
                 <img className='w-6 ml-4' src={search} alt="search" />
             </div>
-            <ul className='flex gap-12 text-xl'>
+            <ul className='hidden lg:flex gap-12 text-xl'>
                 <Link to="/products"><li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>Products</li></Link>
                 <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>About us</li>
                 <li className='transition-all delay-100 cursor-pointer border-transparent border-b-4 border-solid hover:border-b-purple-800 p-1'>Support</li>
