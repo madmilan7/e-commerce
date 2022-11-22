@@ -18,9 +18,9 @@ const MainJewel = ({ productData }) => {
     const dispatch = useDispatch();
 
     return (
-        <div className='bg-white mt-4 w-10/12 h-100 shadow-xl ml-24 flex flex-col justify-between'>
+        <div className='bg-white mt-4 w-11/12 mx-auto md:mx-0 h-128 md:h-100 shadow-xl flex flex-col justify-between'>
             <img src={productData.image} alt='jewel' className='w-52 object-contain mx-auto' />
-            <h3 className='px-4'>{productData.title}</h3>
+            <h3 className='px-4 text-sm sm:text-lg'>{productData.title}</h3>
             <p className='px-4 text-purple-700 text-xl'>{productData.price} $</p>
             <div className='flex justify-between items-center mb-4 px-4'>
                 <div className='flex justify-center items-center gap-3'>
@@ -39,12 +39,12 @@ const MainJewel = ({ productData }) => {
                         <button className='text-white bg-purple-700 text-2xl w-8 h-8'
                             onClick={() => dispatch(increase(productData))}>+
                         </button> :
-                        <button className='text-white bg-purple-700 px-3 py-1'
+                        <button className='text-white bg-purple-700 px-3 py-1 scale-75 sm:scale-100'
                             onClick={() => dispatch(addItem(productData))}>Add to Cart
                         </button>
                     }
                 </div>
-                <Stack spacing={1} className=''>
+                <Stack spacing={1} className='scale-75 sm:scale-100'>
                     <Rating name="half-rating" defaultValue={4.5} precision={0.5} />
                 </Stack>
             </div>
