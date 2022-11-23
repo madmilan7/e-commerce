@@ -17,7 +17,7 @@ const Product = ({ productData }) => {
     const dispatch = useDispatch();
 
     return (
-        <div className='bg-white mt-4 w-72 h-96 shadow-xl'>
+        <div className='bg-white mt-1 sm:mt-6 w-72 mx-auto h-96 shadow-xl scale-75 sm:scale-100'>
             <img src={productData.image} alt='product' className='w-fit h-52 object-contain mx-auto' />
             <h3 className='m-4'>{shorten(productData.title)}</h3>
             <p className='pl-4 text-purple-700'>{productData.price} $</p>
