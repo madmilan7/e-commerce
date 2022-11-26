@@ -16,10 +16,11 @@ const Cart = ({ data }) => {
     const dispatch = useDispatch();
 
     return (
-        <div className='flex justify-around items-center bg-white h-28 ml-20 shadow-xl mb-10'>
+        <div className='flex flex-col gap-y-5 py-5 md:flex-row justify-around items-center
+                        bg-white md:h-28 lg:ml-20 shadow-xl mb-10'>
             <img src={image} alt="product" className='w-24 h-24' />
             <div>
-                <h3 className='text-xl text-gray-500'>{shorten(title)}</h3>
+                <h3 className='text-lg text-gray-500'>{shorten(title)}</h3>
                 <p className='text-purple-700'>{price} $</p>
             </div>
             <div>

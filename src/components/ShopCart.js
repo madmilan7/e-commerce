@@ -14,21 +14,22 @@ const ShopCart = () => {
     const cartState = useSelector(state => state.cartState);
 
     return (
-        <div className='bg-gray-50 h-screen flex justify-between'>
-            <div className='pt-10 w-3/5'>
+        <div className='bg-gray-50 h-full pb-36 flex flex-col-reverse lg:flex-row
+                        justify-between items-center lg:items-start px-20 lg:px-0'>
+            <div className='pt-10 w-full lg:w-3/5'>
                 {cartState.selectedItems.map(item => <Cart key={item.id} data={item} />)}
             </div>
             {
                 cartState.itemsCounter > 0 &&
-                <div className='w-1/4 bg-white h-40 mt-10 mr-20 shadow-xl
-                                p-8 flex flex-col gap-3'>
-                    <p><span className='text-lg text-gray-500 mr-2'>total items: </span>
+                <div className='w-full md:w-1/2 lg:w-1/4 bg-white h-full md:h-52 mt-10 lg:mr-20 shadow-xl
+                                p-2 sm:p-8 flex flex-col gap-3'>
+                    <p><span className='text-sm sm:text-lg text-gray-500 mr-2'>total items: </span>
                         <span className='text-purple-800'>{cartState.itemsCounter}</span>
                     </p>
-                    <p><span className='text-lg text-gray-500 mr-2'>total payments: </span>
+                    <p><span className='text-sm sm:text-lg text-gray-500 mr-2'>total payments: </span>
                         <span className='text-purple-800'>{cartState.totalPrice} $</span>
                     </p>
-                    <div className='flex justify-between items-center'>
+                    <div className='flex  justify-between items-center mt-6'>
                         <button
                             className='bg-red-500 text-white px-3 py-1'
                             onClick={() => dispatch(clear())}>clear</button>
@@ -41,7 +42,7 @@ const ShopCart = () => {
 
             {
                 cartState.checkOut &&
-                <div className='bg-white w-64 h-40 mt-10 shadow-xl mr-20 p-8 flex flex-col justify-evenly'>
+                <div className='bg-white w-64 h-40 mt-10 shadow-xl lg:mr-20 p-8 flex flex-col justify-evenly'>
                     <h3 className='text-gray-500'>checked out successfully</h3>
                     <Link to="/products" className='bg-purple-700 px-3 py-2 text-white text-center'>bye more</Link>
                 </div>
@@ -49,7 +50,7 @@ const ShopCart = () => {
 
             {
                 !cartState.checkOut && cartState.itemsCounter === 0 &&
-                <div className='bg-white w-64 h-40 mt-10 shadow-xl mr-20 p-8 flex flex-col justify-evenly'>
+                <div className='bg-white w-64 h-40 mt-10 shadow-xl lg:mr-20 p-8 flex flex-col justify-evenly'>
                     <h3 className='text-gray-500'>cleared successfully</h3>
                     <Link to="/products" className='bg-purple-700 px-3 py-2 text-white text-center'>go to shop</Link>
                 </div>
