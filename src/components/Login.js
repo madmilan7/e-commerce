@@ -51,17 +51,17 @@ const Login = () => {
     }
 
     return (
-        <div className='flex justify-center items-center bg-gray-50 h-screen'>
-            <form className='w-fit h-fit p-12 m-12 bg-white shadow-xl'>
+        <div className='flex justify-center items-center bg-gray-50 h-fit'>
+            <form className='w-11/12 md:w-fit h-fit p-12 mx-6 my-12 md:m-12 bg-white shadow-xl'>
                 <h2 className='text-left mb-10 font-bold text-3xl text-purple-700'>Login</h2>
                 <div className='flex flex-col mb-2 h-20'>
-                    <label className='text-left mb-1 text-gray-400'>E-mail</label>
+                    <label className='text-sm md:text-base text-left mb-1 text-gray-400'>E-mail</label>
                     <input
                         type="text"
                         name="email"
                         onChange={changeHandler}
                         onFocus={focusHandler}
-                        className={`w-80 h-8 px-3 border border-solid
+                        className={`w-11/12 md:w-80 h-8 px-3 border border-solid
                           focus:outline-none border-slate-300 
                           ${errors.name && touched.name ? 'border-red-500' : ''}`}
                     />
@@ -73,13 +73,13 @@ const Login = () => {
                     }
                 </div>
                 <div className='flex flex-col mb-2 h-20'>
-                    <label className='text-left mb-1 text-gray-400'>Password</label>
+                    <label className='text-sm md:text-base text-left mb-1 text-gray-400'>Password</label>
                     <input
                         type="password"
                         name="password"
                         onChange={changeHandler}
                         onFocus={focusHandler}
-                        className={`w-80 h-8 px-3 border border-solid
+                        className={`w-11/12 md:w-80 h-8 px-3 border border-solid
                           focus:outline-none border-slate-300 
                           ${errors.name && touched.name ? 'border-red-500' : ''}`}
                     />
@@ -91,7 +91,7 @@ const Login = () => {
                     }
                 </div>
                 <div className='flex mb-2 h-20'>
-                    <label className='text-left mb-1 text-gray-400'>I accept terms of privacy policy</label>
+                    <label className='text-sm md:text-base text-left mb-1 text-gray-400'>I accept terms of privacy policy</label>
                     <input
                         type="checkbox"
                         name="isAccepted"
